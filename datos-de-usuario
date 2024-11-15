@@ -1,0 +1,6 @@
+#!/bin/bash
+
+git clone https://github.com/Unahur-Programacion-Concurrente/TP-Infra-2024.git
+
+cd TP-Infra-2024
+./startup.sh
