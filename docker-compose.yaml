@@ -43,9 +43,11 @@ services:
       - ./nginx-conf:/etc/nginx/conf.d
     networks:
       - app-network
+
 volumes:
-	dbdata:
-	wordpress:
+  dbdata:
+  wordpress:
+
 networks:
-	app-network:
-		driver: bridge
+  app-network:
+    driver: bridge
