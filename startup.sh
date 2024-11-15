@@ -34,4 +34,4 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker --version
 docker-compose --version
 
-
+docker-compose up
