@@ -24,8 +24,6 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin d
 sudo groupadd docker 2>/dev/null || echo "El grupo 'docker' ya existe. Continuando..."
 sudo usermod -aG docker $USER  
 
-newgrp docker
-
 sudo systemctl enable docker.service  
 sudo systemctl enable containerd.service  
 
