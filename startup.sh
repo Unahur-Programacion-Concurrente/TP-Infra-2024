@@ -1,8 +1,8 @@
 #!/bin/bash
-echo "Instalacion de Docker y Docker Compose
+echo "Instalacion de Docker y Docker Compose"
 
-sudo apt update  
-sudo apt install apt-transport-https ca-certificates curl software-properties-common  
+sudo apt update  -y
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common  
 
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -17,11 +17,11 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-sudo apt-get update
+sudo apt-get update -y
 
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-sudo groupadd docker
+sudo groupadd docker 2>/dev/null || echo "El grupo 'docker' ya existe. Continuando..."
 sudo usermod -aG docker $USER  
 
 newgrp docker
